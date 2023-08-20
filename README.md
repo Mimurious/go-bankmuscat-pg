@@ -1,4 +1,4 @@
-# Bank Muscat Payment Gateway Implemention for Go
+# Bank Muscat Payment Gateway Implementation for Go
 This Go library provides a simple and efficient way to integrate with the Bank Muscat Payment Gateway for online payment processing. With this library, you can easily handle payment requests and responses, making it suitable for e-commerce websites and other applications that require secure payment processing.
 
 ## Installation
@@ -73,7 +73,7 @@ type ShippingReqInfo struct {
 ### Handling the Response
 After initiating a payment request, you'll receive a response from the Bank Muscat Payment Gateway. To extract meaningful information from the response, follow these steps:
 
-1. Decrypt the Response: You must use the bankmuscatpg.DecryptAES256GCM function to decrypt the response data. This function will ensure that the data is securely decrypted for further processing.
+1. Decrypt the Response: You must use the `bankmuscatpg.DecryptAES256GCM` function to decrypt the response data. This function will ensure that the data is securely decrypted for further processing.
 
 2. Interpret the Response: The decrypted response will contain various fields that provide information about the transaction status, payment details, and more. Refer to the [Official API documents](https://mti.bankmuscat.com:7443/kitLibrary/kits/download/SmartPay_Integration_Guide.pdf) for a comprehensive guide on interpreting the response data. This document provides detailed explanations of the response fields and their meanings.
 

@@ -2,7 +2,6 @@ package bankmuscatpg
 
 import (
 	"fmt"
-	"net/url"
 	"reflect"
 )
 
@@ -116,18 +115,6 @@ func (Bmpg *BankMuscatPG) Request(rI RequestInfo, bRI BillingReqInfo, sRI Shippi
 	}
 
 	return response, nil
-}
-
-func mapToString(requestMap map[string]interface{}) string {
-	var requestData string
-	for key, value := range requestMap {
-		requestData += key + "=" + url.QueryEscape(fmt.Sprint(value)) + "&"
-	}
-
-	if len(requestData) > 0 {
-		requestData = requestData[:len(requestData)-1]
-	}
-	return requestData
 }
 
 // Make the request page HTML using the encrypted data, this page must be rendered directly to the user

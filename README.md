@@ -19,14 +19,19 @@ import (
 func main() {
     // Set to true for test environment, false for production
     TestEnv := true
+    // These variables are optional; default values:
+    Currency := "OMR"
+    Language := "EN"
 
     // Create a new BMPG (Bank Muscat Payment Gateway) object
     bmpg := bankmuscatpg.New(bankmuscatpg.BankMuscatPG{
         MerchantId:  -1,
         AccessCode:  "my16digitIvKey12",
         WorkingKey:  "my32digitkey12345678901234567890",
-        TestEnv:     &TestEnv,
         CallbackUrl: "example.com",
+        TestEnv:     &TestEnv, // Optional
+        Currency:    &Currency, // Optional
+        Language:    &Language, // Optional
     })
 
     // Initiate a payment request

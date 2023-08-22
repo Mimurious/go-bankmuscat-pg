@@ -22,7 +22,7 @@ func main() {
 
     // Create a new BMPG (Bank Muscat Payment Gateway) object
     bmpg := bankmuscatpg.New(bankmuscatpg.BankMuscatPG{
-        MerchantId:  ***REMOVED***,
+        MerchantId:  -1,
         AccessCode:  "my16digitIvKey12",
         WorkingKey:  "my32digitkey12345678901234567890",
         TestEnv:     &TestEnv,
